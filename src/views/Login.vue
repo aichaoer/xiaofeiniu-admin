@@ -24,8 +24,8 @@
     data() {  //普通组件的模型对象是函数返回值
       return {
         formData:{  //表单中用户输入的两个数据
-          aname:"",
-          apwd:"",
+          aname:"admin",
+          apwd:"999999",
         }
       }
     },
