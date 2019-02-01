@@ -21,6 +21,14 @@ import Table from "../components/Table"
         tableList:[]
       }
     },
+    mounted() {
+      var url=this.$store.state.globalSettings.apiUrl+"/admin/table";
+      this.$axios.get(url).then(({data})=>{     //res->{data}  数据的解构
+        this.tableList=data;
+      }).catch((err)=>{
+        console.log(err);
+      })
+    },
     components:{
       "xfn-table":Table
     }
